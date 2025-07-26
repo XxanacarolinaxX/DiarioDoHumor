@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cinza"
+    android:orientation="vertical"
+    tools:context=".NovaEntrada">
+
+    <TextView
+        android:id="@+id/Text_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Data: "
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_data"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/backgroud_entrada"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/Text_data"
+        app:layout_constraintTop_toTopOf="@id/Text_data">
+
+        <EditText
+            android:layout_width="140dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:hint="DD/MM/AAAA"
+            android:padding="5dp"
+            android:paddingStart="5dp"
+            app:layout_constraintStart_toEndOf="@id/Text_data"
+            app:layout_constraintTop_toTopOf="@id/Text_data" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Text_emocao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="100dp"
+        android:text="Emoção:"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_emocao"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/backgroud_entrada"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Text_emocao">
+
+        <RadioGroup
+            android:id="@+id/radioGroup_emocao1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="Feliz"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="Triste"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="Raiva"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="Medo"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radioGroup_emocao2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="Inveja"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="Ansiedade"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="Tédio"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Text_categoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Categoria:"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/LinearLayout_emocao" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_categoria"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Text_categoria">
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/backgroud_entrada"
+            android:padding="14dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Text_sentindo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Como se sentiu hoje?"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/LinearLayout_categoria" />
+
+    <EditText
+        android:id="@+id/Edit_sentindo"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/backgroud_entrada"
+        android:hint="Faça um breve resumo de como foi o seu dia..."
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Text_sentindo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_cancelar"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_cancelaresalvar"
+        android:text="Cancelar"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/Edit_sentindo"
+        app:layout_constraintTop_toBottomOf="@id/Edit_sentindo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_salvar"
+        android:layout_width="230dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_cancelaresalvar"
+        android:text="Salvar"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/Edit_sentindo"
+        app:layout_constraintStart_toBottomOf="@id/button_cancelar"
+        app:layout_constraintTop_toBottomOf="@id/Edit_sentindo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
