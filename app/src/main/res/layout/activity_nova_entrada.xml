@@ -31,6 +31,7 @@
         app:layout_constraintTop_toTopOf="@id/Text_data">
 
         <EditText
+            android:id="@+id/Edit_data"
             android:layout_width="140dp"
             android:layout_height="48dp"
             android:gravity="center"
@@ -169,6 +170,7 @@
         app:layout_constraintTop_toBottomOf="@id/Text_categoria">
 
         <Spinner
+            android:id="@+id/Spinner_categoria"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/backgroud_entrada"

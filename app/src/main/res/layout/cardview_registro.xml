@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:backgroundTint="@color/cinza_medio"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text_ExemploData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="DD/MM/AAAA"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_ExemploEmocao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:padding="8dp"
+            android:text="Emoção: Exemplo"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_ExemploData" />
+
+        <TextView
+            android:id="@+id/text_ExemploCategoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:padding="8dp"
+            android:text="Categoria: Trabalho"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_ExemploEmocao" />
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_divisao"
+            android:layout_width="2dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="180dp"
+            android:background="@color/black"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_ExemploResumo"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:padding="8dp"
+            android:text="Lorem ipsum dolor sit amet. Vel aliquid incidunt At illo cumque non voluptatum aliquid est voluptas fuga. Ut enim quia aut dolores corrupti ut enim velit et quidem veniam quo voluptatem galisum. Aut iusto Quis non dolor maiores est reiciendis ipsa ad minus internos quo nisi maxime et reiciendis quod sit libero possimus. Hic debitis molestiae ex itaque aliquid quo voluptas nisi ut vitae placeat qui facere repellendus aut quibusdam voluptas non nobis dolorem."
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/LinearLayout_divisao"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
