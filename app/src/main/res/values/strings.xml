@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Diário do Humor</string>
+    <string name="data">Data:</string>
+    <string name="dd_mm_aaaa">DD/MM/AAAA</string>
+    <string name="emocao">Emoção:</string>
+    <string name="feliz">Feliz</string>
+    <string name="triste">Triste</string>
+    <string name="raiva">Raiva</string>
+    <string name="medo">Medo</string>
+    <string name="inveja">Inveja</string>
+    <string name="ansiedade">Ansiedade</string>
+    <string name="tedio">Tédio</string>
+    <string name="categoria">Categoria:</string>
+    <string name="como_se_sentiu_hoje">Como se sentiu hoje?</string>
+    <string name="fa_a_um_breve_resumo_de_como_foi_o_seu_dia">Faça um breve resumo de como foi o seu dia...</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="adicionar">Adicionar</string>
 </resources>

@@ -4,8 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    android:backgroundTint="@color/cinza_medio"
+    android:backgroundTint="@color/cinza_claro"
     android:orientation="vertical"
+    android:elevation="8dp"
     android:padding="12dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -13,39 +14,46 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/text_ExemploData"
+            android:id="@+id/text_CardData"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="8dp"
+            android:layout_marginStart="4dp"
+            android:gravity="center"
+            android:padding="4dp"
             android:text="DD/MM/AAAA"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@id/LinearLayout_divisao"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/text_ExemploEmocao"
+            android:id="@+id/text_CardEmocao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:padding="8dp"
-            android:text="Emoção: Exemplo"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:padding="4dp"
+            android:text="Feliz"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_ExemploData" />
+            app:layout_constraintTop_toBottomOf="@id/text_CardData"
+            app:layout_constraintEnd_toStartOf="@id/LinearLayout_divisao"/>
 
         <TextView
-            android:id="@+id/text_ExemploCategoria"
+            android:id="@+id/text_CardCategoria"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:padding="8dp"
-            android:text="Categoria: Trabalho"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:padding="4dp"
+            android:text="Trabalho"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_ExemploEmocao" />
+            app:layout_constraintTop_toBottomOf="@id/text_CardEmocao"
+            app:layout_constraintEnd_toStartOf="@id/LinearLayout_divisao"/>
 
         <LinearLayout
             android:id="@+id/LinearLayout_divisao"
@@ -60,7 +68,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/text_ExemploResumo"
+            android:id="@+id/text_CardResumo"
             android:layout_width="200dp"
             android:layout_height="120dp"
             android:ellipsize="end"
@@ -68,7 +76,7 @@
             android:padding="8dp"
             android:text="Lorem ipsum dolor sit amet. Vel aliquid incidunt At illo cumque non voluptatum aliquid est voluptas fuga. Ut enim quia aut dolores corrupti ut enim velit et quidem veniam quo voluptatem galisum. Aut iusto Quis non dolor maiores est reiciendis ipsa ad minus internos quo nisi maxime et reiciendis quod sit libero possimus. Hic debitis molestiae ex itaque aliquid quo voluptas nisi ut vitae placeat qui facere repellendus aut quibusdam voluptas non nobis dolorem."
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/LinearLayout_divisao"
