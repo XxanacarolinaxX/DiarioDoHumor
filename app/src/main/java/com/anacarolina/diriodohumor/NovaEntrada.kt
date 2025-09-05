@@ -61,16 +61,20 @@ class NovaEntrada : AppCompatActivity() {
             showDatePicker()
         }
 
-
-
-        //Verifica qual emoção foi selecionada
+        //Permitir apenas um RadioButton clicado
         flexBoxEmocao = findViewById(R.id.flexBox_emocao)
-        var emocaoString = " "
+
         for (i in 0 until flexBoxEmocao.childCount) {
-            val view = flexBoxEmocao.getChildAt(i)
-            if (view is RadioButton && view.isChecked) {
-                emocaoString = view.text.toString().trim()
-                break
+            val atualRB = flexBoxEmocao.getChildAt(i)
+            if (atualRB is RadioButton) {
+                atualRB.setOnClickListener {
+                    for (j in 0 until flexBoxEmocao.childCount) {
+                        val outroRB = flexBoxEmocao.getChildAt(j)
+                        if (outroRB is RadioButton && outroRB != atualRB) {
+                            outroRB.isChecked = false
+                        }
+                    }
+                }
             }
         }
 
@@ -96,6 +100,7 @@ class NovaEntrada : AppCompatActivity() {
 
             //Pegar a data no DatePicker
             val dataString = editData.text.toString().trim()
+
 
             //Verifica qual emoção foi selecionada
             flexBoxEmocao = findViewById(R.id.flexBox_emocao)
@@ -129,7 +134,7 @@ class NovaEntrada : AppCompatActivity() {
                 Toast.makeText(this, "Salvo com sucesso", Toast.LENGTH_SHORT).show()
             }
 
-            //Quando clicar no botão as informações irem pro CardView na Recycler
+            //Mandar as informações pro CardView na Recycler
             val result = Intent().apply {
                 putExtra(EXTRA_DATA, dataString)
                 putExtra(EXTRA_EMOCAO, emocaoString)

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoDiaria">
+
+    <TextView
+        android:id="@+id/tv_info_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Data: "
+        android:textColor="@color/black"
+        android:textSize="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_info_data"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/backgroud_entrada"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/tv_info_data"
+        app:layout_constraintStart_toEndOf="@id/tv_info_data"
+        app:layout_constraintTop_toTopOf="@id/tv_info_data">
+
+        <TextView
+            android:id="@+id/tv_entrada_info_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="dd/mm/aaaa"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_info_emocao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:text="Emoção: "
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_info_data" />
+
+    <LinearLayout
+        android:id="@+id/ll_info_emocao"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/backgroud_entrada"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/tv_info_emocao"
+        app:layout_constraintStart_toEndOf="@id/tv_info_emocao"
+        app:layout_constraintTop_toTopOf="@id/tv_info_emocao">
+
+        <TextView
+            android:id="@+id/tv_entrada_info_emocao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Feliz"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_info_categoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:text="Categoria: "
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_info_emocao" />
+
+    <LinearLayout
+        android:id="@+id/ll_info_categoria"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/backgroud_entrada"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/tv_info_categoria"
+        app:layout_constraintStart_toEndOf="@id/tv_info_categoria"
+        app:layout_constraintTop_toTopOf="@id/tv_info_categoria">
+
+        <TextView
+            android:id="@+id/tv_entrada_info_categoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Trabalho"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_info_sentindo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:text="Como está se sentindo?"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_info_categoria" />
+
+    <TextView
+        android:id="@+id/tv_entrada_info_sentindo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_info_sentindo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="12dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:fontFamily=""
+        android:textSize="22sp"
+        android:text="Lorem ipsum dolor sit amet. Eos temporibus libero eos eveniet sunt sit veniam voluptatum nam soluta galisum ab asperiores libero et deserunt doloremque qui quidem vitae. Hic voluptas"
+        android:background="@drawable/backgroud_cinza_entrada"/>
+    
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_voltar"
+        android:layout_width="245dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_cancelaresalvar"
+        app:layout_constraintTop_toBottomOf="@id/tv_entrada_info_sentindo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="VOLTAR"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        />
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>

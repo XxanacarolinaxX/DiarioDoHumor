@@ -6,8 +6,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class AdaptadorEntrada(private val listaEntrada: MutableList<Registro>) :
-    RecyclerView.Adapter<AdaptadorEntrada.RegistroViewHolder>() {
+class AdaptadorRecycler(
+    private val listaEntrada: MutableList<Registro>,
+    private val onItemClick: (Registro) -> Unit
+) :
+    RecyclerView.Adapter<AdaptadorRecycler.RegistroViewHolder>() {
 
     //Guarda as referências dos TextViews de um item da RecyclerView.
     class RegistroViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -15,6 +18,9 @@ class AdaptadorEntrada(private val listaEntrada: MutableList<Registro>) :
         val textViewEmocao: TextView = itemView.findViewById(R.id.text_CardEmocao)
         val textViewCategoria: TextView = itemView.findViewById(R.id.text_CardCategoria)
         val textViewResumo: TextView = itemView.findViewById(R.id.text_CardResumo)
+
+        val cardView = itemView.findViewById<View>(R.id.cardView)
+
     }
 
     //Cria a View para cada item
@@ -31,12 +37,17 @@ class AdaptadorEntrada(private val listaEntrada: MutableList<Registro>) :
         holder.textViewEmocao.text = entrada.emocao.toString()
         holder.textViewCategoria.text = entrada.categoria.toString()
         holder.textViewResumo.text = entrada.resumo.toString()
+
+        holder.cardView.setOnClickListener {
+            onItemClick(entrada)
+        }
     }
+
     //Adiciona um novo item à lista
     override fun getItemCount(): Int = listaEntrada.size
 
     //Adiciona um novo registro à lista e atualiza a RecyclerView.
-    fun adicionarEntrada(entrada: Registro){
+    fun adicionarEntrada(entrada: Registro) {
         listaEntrada.add(0, entrada)
         notifyItemInserted(0)
     }

@@ -22,10 +22,11 @@
 
     <LinearLayout
         android:id="@+id/LinearLayout_data"
-        android:layout_width="140dp"
-        android:layout_height="48dp"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
         android:layout_marginStart="10dp"
         android:background="@drawable/backgroud_entrada"
+        android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintStart_toEndOf="@id/Text_data"
         app:layout_constraintTop_toTopOf="@id/Text_data">
@@ -43,7 +44,6 @@
             android:padding="5dp"
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
-
             android:textColorHint="@color/black"
             app:layout_constraintStart_toEndOf="@id/Text_data"
             app:layout_constraintTop_toTopOf="@id/Text_data" />
@@ -207,6 +207,7 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/button_cancelaresalvar"
         android:text="@string/cancelar"
+        android:textSize="18sp"
         android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@id/button_adicionar"
         app:layout_constraintStart_toStartOf="@id/Edit_resumo"
@@ -220,6 +221,7 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/button_cancelaresalvar"
         android:text="@string/adicionar"
+        android:textSize="18sp"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@id/Edit_resumo"
         app:layout_constraintStart_toEndOf="@id/button_cancelar"

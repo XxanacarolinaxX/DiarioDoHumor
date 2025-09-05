@@ -9,8 +9,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var adaptador: AdaptadorRecycler
+    private val listaEntrada = mutableListOf<Registro>()
 
-    private lateinit var adaptador: AdaptadorEntrada
 
     private val relacionarEntrada =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { resultado ->
@@ -41,8 +42,18 @@ class MainActivity : AppCompatActivity() {
 
         //RecyclerView
         val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
-        adaptador = AdaptadorEntrada(mutableListOf())
         recyclerView.layoutManager = LinearLayoutManager(this)
+
+        //Passar as informações do card para a InfoDiaria
+        adaptador = AdaptadorRecycler(listaEntrada) { registro ->
+            val intent = Intent(this, InfoDiaria::class.java).apply {
+                putExtra("data", registro.data)
+                putExtra("emocao", registro.emocao)
+                putExtra("categoria", registro.categoria)
+                putExtra("sentindo", registro.resumo)
+            }
+            startActivity(intent)
+        }
         recyclerView.adapter = adaptador
 
         //Botão para adicionar nova entrada
