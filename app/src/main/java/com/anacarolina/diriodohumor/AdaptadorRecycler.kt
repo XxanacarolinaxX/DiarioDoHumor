@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
 class AdaptadorRecycler(
@@ -33,10 +34,10 @@ class AdaptadorRecycler(
     //Preenche a View com os dados
     override fun onBindViewHolder(holder: RegistroViewHolder, position: Int) {
         val entrada = listaEntrada[position]
-        holder.textViewData.text = entrada.data.toString()
-        holder.textViewEmocao.text = entrada.emocao.toString()
-        holder.textViewCategoria.text = entrada.categoria.toString()
-        holder.textViewResumo.text = entrada.resumo.toString()
+        holder.textViewData.text = entrada.data
+        holder.textViewEmocao.text = entrada.emocao
+        holder.textViewCategoria.text = entrada.categoria
+        holder.textViewResumo.text = entrada.resumo
 
         holder.cardView.setOnClickListener {
             onItemClick(entrada)

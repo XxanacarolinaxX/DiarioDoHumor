@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:id="@+id/cardView"
     android:layout_margin="8dp"
-    android:backgroundTint="@color/cinza_claro"
+    android:backgroundTint="@color/white"
     android:orientation="vertical"
     android:elevation="8dp"
     android:padding="12dp"
