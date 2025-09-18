@@ -4,11 +4,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
 class AdaptadorRecycler(
     private val listaEntrada: MutableList<Registro>,
+    private val listaInteira: MutableList<Registro>,
     private val onItemClick: (Registro) -> Unit
 ) :
     RecyclerView.Adapter<AdaptadorRecycler.RegistroViewHolder>() {
@@ -50,6 +50,7 @@ class AdaptadorRecycler(
     //Adiciona um novo registro à lista e atualiza a RecyclerView.
     fun adicionarEntrada(entrada: Registro) {
         listaEntrada.add(0, entrada)
+        listaInteira.add(entrada)
         notifyItemInserted(0)
     }
 

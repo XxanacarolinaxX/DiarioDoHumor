@@ -14,6 +14,7 @@ import com.google.android.flexbox.FlexboxLayout
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
+import java.text.Normalizer
 
 class NovaEntrada : AppCompatActivity() {
 
@@ -133,6 +134,7 @@ class NovaEntrada : AppCompatActivity() {
             else {
                 Toast.makeText(this, "Salvo com sucesso", Toast.LENGTH_SHORT).show()
             }
+
 
             //Mandar as informações pro CardView na Recycler
             val result = Intent().apply {
